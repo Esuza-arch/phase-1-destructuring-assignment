@@ -25,6 +25,78 @@ const nestedMuppet = {
   nestedPartner: 'Miss Piggy'
 };
 
+const [moo, neigh, baa, oink, cluck] = farmAnimals.split(' ');
+
+console.log(moo);   // => 'cow'
+console.log(neigh); // => 'horse'
+console.log(baa);   // => 'sheep'
+console.log(oink);  // => 'pig'
+console.log(cluck); // => 'chicken'
+
+const [bessie, , dolly, babe, little] = farmAnimals.split(' ');
+
+console.log(bessie); // => 'cow'
+console.log(dolly);  // => 'sheep'
+console.log(babe);   // => 'pig'
+console.log(little); // => 'chicken'
+
+const [blackAndWhite, , black, pink] = farmAnimals.split(' ');
+
+console.log(blackAndWhite); // => 'cow'
+console.log(black);         // => 'sheep'
+console.log(pink);          // => 'pig'
+
+const [red, orange, yellow, green, blue, indigo, violet] = colors;
+
+console.log(red);    // => 'red'
+console.log(orange); // => 'orange'
+console.log(yellow); // => 'yellow'
+console.log(green);  // => 'green'
+console.log(blue);   // => 'blue'
+console.log(indigo); // => 'indigo'
+console.log(violet); // => 'violet'
+
+const [r, o, y, g, b, , v] = colors;
+
+console.log(r); // => 'red'
+console.log(o); // => 'orange'
+console.log(y); // => 'yellow'
+console.log(g); // => 'green'
+console.log(b); // => 'blue'
+console.log(v); // => 'violet'
+
+const [, , , , , indg] = colors;
+
+console.log(indg); // => 'indigo'
+
+const { muppetName, color, song, job, partner } = muppet;
+
+console.log(muppetName); // => 'Miss Piggy'
+console.log(color);      // => 'pink'
+console.log(song);       // => 'Never Before, Never Again'
+console.log(job);        // => 'Cast member of The Muppet Show'
+console.log(partner);    // => 'Kermit'
+
+const { 
+  nestedName, 
+  nestedColor, 
+  album: { 
+    theMuppetMovie: { song1, song2, song3, song4 } 
+  }, 
+  nestedJob, 
+  nestedPartner 
+} = nestedMuppet;
+
+console.log(nestedName);     // => 'Kermit'
+console.log(nestedColor);    // => 'green'
+console.log(song1);          // => 'Rainbow Connection'
+console.log(song2);          // => 'Moving Right Along'
+console.log(song3);          // => 'Never Before, Never Again'
+console.log(song4);          // => 'I Hope That Something Better Comes Along'
+console.log(nestedJob);      // => 'Host of The Muppet Show'
+console.log(nestedPartner);  // => 'Miss Piggy'
+
+
 // Strings
 
 // 1. Use destructuring to assign appropriate variables based on the sounds animals make.
